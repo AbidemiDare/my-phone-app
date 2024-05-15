@@ -94,13 +94,13 @@ header
 ==============================
 */
 
-.header-links {
+.header-aside {
   display: none;
 }
 
-.header-btn {
+/* .header-btn {
   display: none;
-}
+} */
 
 .header-wrapper {
   width: 90vw;
@@ -113,25 +113,36 @@ header
 }
 
 .web-name h2 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 700;
+  color: var(--white);
 }
 
 .web-name h2 span {
-  background: var(--primaryClr100);
+  background: var(--white);
   padding: 0.1rem 0.4rem;
   color: var(--primaryClr900);
-  font-size: 1.6rem;
+  color: var(--black);
+  font-size: 1.3rem;
   font-weight: bold;
+}
+
+#header-search {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
 }
 
 #header-bar {
   cursor: pointer;
-  margin-top: 0.5rem;
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--black);
+  color: var(--white);
 }
+
+/* @media screen and (min-width: 420px) {
+
+} */
 
 @media screen and (min-width: 768px) {
   #header-bar {
@@ -150,6 +161,13 @@ header
   .web-name h2 span {
     font-size: 1.5rem;
   }
+ 
+.header-aside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 2rem;
+}
 
   .header-links {
     display: block;
@@ -170,7 +188,7 @@ header
     font-weight: 500;
     cursor: pointer;
     display: block;
-    color: var(--black);
+    color: var(--white);
     text-transform: capitalize;
     transition: var(--transition);
     -webkit-transition: var(--transition);
@@ -190,7 +208,7 @@ header
   .header-links ul li ul {
     display: block;
     position: absolute;
-    top: 25px;
+    top: 18px;
     left: -5px;
     background: var(--greyClr300);
     width: 90px;
@@ -206,9 +224,10 @@ header
     color: var(--black);
     width: 100%;
     font-weight: 600;
-    padding: 1rem;
+    padding: 0.8rem 0.5rem;
     text-align: center;
     cursor: pointer;
+    font-size: 0.6rem;
     transition: var(--transition);
     -webkit-transition: var(--transition);
     -moz-transition: var(--transition);
@@ -216,13 +235,17 @@ header
     -o-transition: var(--transition);
 }
 
+  .header-links ul li ul li a span {
+    margin-top: 0.3rem;
+  }
+
   .header-links ul li ul li a:hover {
     background: var(--primaryClr800);
   }
 
   .header-btn {
     display: block;
-    padding: 0.8rem 1.3rem;
+    padding: 0.8rem 1rem;
     font-size: 0.9rem;
     font-weight: 500;
   }
@@ -243,7 +266,6 @@ header
 
   .header-links ul li .dropdown {
     left: -8px;
-    width: 100px;
   }
 
   .header-btn {
@@ -258,38 +280,34 @@ header
   }
 
   .web-name h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .web-name h2 span {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
+  }
+  
+  .header-aside {
+    gap: 0 2.5rem;
   }
 
   .header-links ul li a {
-    font-size: 18px;
-  }
-
-  .header-links ul li a span {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .header-links ul li ul li a {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
 
   .header-btn {
     display: block;
-    padding: 0.9rem 1.6rem;
-    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.7rem;
     font-weight: 500;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-wrapper {
-    width: 80vw;
-  }
-
   .web-name h2 {
     font-size: 1.5rem;
   }
@@ -298,17 +316,12 @@ header
     font-size: 1.8rem;
   }
 
-  /* .header-links ul li a {
-    font-size: 20px;
-  } */
-
   .header-links ul li a span {
-    font-size: 15px;
+    font-size: 11px;
   }
 
   .header-links ul li ul {
     left: -8px;
-    width: 120px;
   }
 
   .header-btn {
@@ -1063,6 +1076,144 @@ LOGIN SECTION
     border: none;
   }
 }
+
+/* 
+====================================
+Hero section
+====================================
+*/
+
+.hero-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./Images/hero-bcg.jpg') center/cover no-repeat;
+  width: 100%;
+  height: 80vh;
+  z-index: -5;
+  transition: var(--transition);
+  animation: animate 16s ease-in-out infinite 2s;
+  -webkit-animation: animate 16s ease-in-out infinite 2s;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+@keyframes animate {
+  from {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./Images/hero-bcg.jpg') center/cover no-repeat;
+  } to {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./Images/herro.jpg') center/cover no-repeat;
+
+  }
+}
+
+.hero-wrapper {
+  text-align: center;
+  width: 80vw;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.hero-info h1 {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero-info h1 span {
+  color: tomato;
+}
+
+.hero-search {
+  position: relative;
+  width: 100%;
+}
+
+.hero-search input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#hero-search-btn {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  padding: 9px;
+  border: none;
+  background: var(--primaryClr100);
+  color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+@media screen and (min-width: 420px) {
+.hero-info {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-info h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-search {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+} 
+
+@media screen and (min-width:768px) {
+  .hero-info {
+  max-width: 700px;
+}
+
+.hero-info h1 {
+  font-size: 1.6rem;
+}
+
+#hero-search-btn:hover {
+  background: var(--primaryClr500);
+}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
