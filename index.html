@@ -24,7 +24,10 @@
            <h2><span>D</span>mobile</h2>
        </div>
 
-       <span id="header-bar"><i class="fa-solid fa-bars"></i></span>
+       <div class="web-aside"> 
+          <button id="header-cart"><i class="fa-solid fa-shopping-cart"></i></button>
+          <span id="header-bar"><i class="fa-solid fa-bars"></i></span>
+      </div>
          
        <div class="header-aside">
        <!-- header nav links -->
@@ -59,9 +62,9 @@
               <li><a href="">contact</a></li>
        </div>
 
-       <button class="header-btn btn">
-          Create an account
-       </button>
+       <span id="header-aside-btn"><i class="fa-solid fa-shopping-cart"></i></span>
+
+       <button class="header-btn btn">Create an account</button>
       </div>
 
     </div>
@@ -87,7 +90,7 @@
 
                <!-- menu link two -->
                <li><a href="">products <span><i class="fa-solid fa-caret-down"></i></span></a>
-                  <ul class="dropdown">
+                  <ul class="dropdown show">
                      <li><a href="">BMW</a></li>
                     <li><a href="">Camry</a></li>
                     <li><a href="">Toyota</a></li>
@@ -114,8 +117,8 @@
 
          <!-- menu btns -->
       <div class="menu-btns">
-          <button class="menu-btn menu-btn-one">Create an account</button>
-          <button class="menu-btn menu-btn-two">Sign in</button>
+          <button class="menu-btn menu-btn-one">Log in</button>
+          <button class="menu-btn menu-btn-two">Register</button>
       </div>
 
       <!-- menu socials -->
@@ -156,7 +159,6 @@
               <input
                 type="text"
                 id="name"
-                placeholder="firstname..."
               />
             </div>
 
@@ -165,13 +167,12 @@
               <input
                 type="text"
                 id="lname"
-                placeholder="lastname..."
               />
             </div>
 
             <div class="form-row">
               <label for="email"><b>Email: </b></label>
-             <input type="text" id="email" placeholder="email..."/>
+             <input type="text" id="email" />
             </div>
 
             <div class="form-row">
@@ -179,7 +180,7 @@
               <input
                 type="password"
                 id="password"
-                placeholder="password..." required
+               required
               />
               <div class="row-icon">
               <button class="password-btn row-btn">
@@ -194,7 +195,6 @@
               <input
                 type="password"
                 id="confirm-password"
-                placeholder="Confirm password..."  
               required/>
               <div class="row-icon">
               <button class="confirm-password-btn row-btn">
@@ -284,7 +284,7 @@
     <section class="hero-section">
           <div class="hero-wrapper">
               <div class="hero-info">
-                <h1>Exquisite <span>gadget</span> for use</h1>
+                <h1>Your home of quality <span>gadget</span></h1>
                 <div class="hero-search">
                   <input type="search" name="search" id="search" placeholder="search for an item...">
                 <button type="submit" id="hero-search-btn">Search</button>
@@ -292,6 +292,271 @@
               </div>
           </div>
     </section>
-   <script src="./app.js"></script>
+
+  <main>
+    <section class="products">
+        <div class="products-wrapper">
+          <!-- product buttons -->
+          <div class="products-btns">
+            <button class="product-btn product-btn-one product-active">All</button>
+            <button class="product-btn product-btn-two">Laptops</button>
+            <button class="product-btn product-btn-three">Phones</button>
+            <button class="product-btn product-btn-four">Others</button>
+          </div>
+
+          <!---- products container ----->
+          <div class="products-container">
+            <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+            
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+            
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+            
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+            
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+            
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+            
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+                        <!-- product -->
+              <div class="product">
+              <div class="product-img-container">
+                <img src="./Images/phone-one.jpg" class="product-img" alt="phone image">
+              </div>
+              <!-- product informatio2n -->
+              <div class="product-info">
+                  <h4 class="product-name"><b>iphone 11 promax</b></h4>
+                  <p class="product-description">Lorem ipsum dolor sit amet.</p>
+                  <p class="product-price">$390</p>
+                  <div class="product-quantity">
+                    <button class="increment">-</button>
+                  <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
+                  <button class="decrement">+</button>
+                  </div>
+                  <div class="product-btns">
+                  <button class="product-button product-cart">Add to cart</button>
+                  <button class="product-button product-buy">Buy now</button>
+                  </div>
+
+              </div>
+            </div>
+            <!-- end of a single product --->
+
+          </div>
+        </div>
+    </section>
+  </main>
+
+ <script src="./app.js"></script>
 </body>
 </html>

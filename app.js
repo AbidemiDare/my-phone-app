@@ -12,7 +12,7 @@ cancelMenu.addEventListener('click', function() {
 
 // signup variables
 const headerBtn = document.querySelector('.header-btn');
-const menuBtnOne = document.querySelector(".menu-btn-one");
+const menuBtnTwo = document.querySelector(".menu-btn-two");
 const cancelSignUp= document.querySelector(".cancel-signup");
 const signupSection = document.querySelector(".signup-section");
 
@@ -23,7 +23,7 @@ headerBtn.addEventListener("click", function () {
 
 
 // Display pop modal onclick (Mobile view)
-menuBtnOne.addEventListener('click', function() {
+menuBtnTwo.addEventListener('click', function() {
     signupSection.style.display = 'block';
 })
 
@@ -67,30 +67,32 @@ confirmPasswordBtn.addEventListener('click', function() {
    }
 })
 
-// const LogBtn = document.querySelector('.login-btn');
-// const logEye = document.querySelector('.log-eye');
-// const logSlash = document.querySelector('.log-slash');
-// const logPassword = document.getElementById('log-password')
+const loginBtn = document.querySelector('.login-btn')
+const logEye = document.querySelector('.log-eye');
+const logSlash = document.querySelector('.log-slash');
+const logPassword = document.getElementById('log-password')
 
-// LogBtn.addEventListener('click', function() {
-//   if (logPassword.type === 'password') {
-//     logPassword.type = 'text';
-//     logEye.style.display = 'block';
-//     logSlash.style.display = 'none';
-//   } else {
-//     logPassword.type = 'password';
-//     logEye.style.display = "none";
-//     logSlash.style.display = "block";
-//   }
-// })
+loginBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (logPassword.type === 'password') {
+          logPassword.type = 'text';
+          logEye.style.display = 'block'
+          logSlash.style.display = 'none';
+        } else {
+           logPassword.type = 'password';
+          logEye.style.display = 'none'
+          logSlash.style.display = 'block';
+        }
+})
 
-//  Lofin Variables
-const menuBtnTwo = document.querySelector(".menu-btn-two");
+//  Login Variables
+const menuBtnOne = document.querySelector(".menu-btn-one");
 const cancelLogin = document.querySelector(".cancel-login");
 const loginSection = document.querySelector(".login-section");
 
 // Display login popup onclick
-menuBtnTwo.addEventListener('click', function() {
+menuBtnOne.addEventListener('click', function() {
     loginSection.style.display = 'block'
 })
 
@@ -99,13 +101,19 @@ cancelLogin.addEventListener('click', function() {
       loginSection.style.display = "none";
 })
 
-const formDet = document.querySelector('#show-log')
+// const formDet = document.querySelector('#show-log')
 
-formDet.addEventListener('click', function() {
-  signupSection.style.display = 'none';
-    loginSection.style.display = "block";
+// formDet.addEventListener('click', function() {
+//   signupSection.style.display = 'none';
+//     loginSection.style.display = "block";
+// })
+
+const showDropdown = document.querySelector('.fa-caret-down');
+const menudropdown = document.querySelector('.menu-links li .dropdown');
+
+showDropdown.addEventListener('click', function(e) {
+  e.preventDefault();
+      menudropdown.classList.add("show");
+      menudropdown.style.display = 'block'
 })
-
-
-
 
