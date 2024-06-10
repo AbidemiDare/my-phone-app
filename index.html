@@ -24,10 +24,15 @@
            <h2><span>D</span>mobile</h2>
        </div>
 
+       <button class="web-join">join</button>
+
        <div class="web-aside"> 
           <button id="header-cart"><i class="fa-solid fa-shopping-cart"></i></button>
+          <!-- <span><i class="fa-solid fa-ellipsis-vertical"></i></span> -->
           <span id="header-bar"><i class="fa-solid fa-bars"></i></span>
       </div>
+
+      <!-- <span><i class="fa-brands fa-twitter"></i></span> -->
          
        <div class="header-aside">
        <!-- header nav links -->
@@ -46,6 +51,7 @@
                     <li><a href="">Honda</a></li>
                  </ul>
               </li>
+
               <!-- anv link three -->
               <li><a href="">services <span>
                <i class="fa-solid fa-chevron-down"></i>
@@ -56,6 +62,7 @@
                      <li><a href="">iSwap</a></li>
                   </ul>
               </li>
+
               <!-- nav link four -->
               <!-- <li><a href="">faqs</a></li> -->
               <!-- nav link five -->
@@ -86,11 +93,11 @@
          <div class="menu-links">
             <ul>
                <!-- menu link one -->
-               <li><a href="">home</a></li>
+               <li class="menu-item"><a href="">home</a></li>
 
                <!-- menu link two -->
-               <li><a href="">products <span><i class="fa-solid fa-caret-down"></i></span></a>
-                  <ul class="dropdown show">
+               <li class="menu-item"><a href="">products <span><i class="fa-solid fa-caret-down"></i></span></a>
+                  <ul class="dropdown-menu">
                      <li><a href="">BMW</a></li>
                     <li><a href="">Camry</a></li>
                     <li><a href="">Toyota</a></li>
@@ -99,27 +106,27 @@
                </li>
 
                <!-- menu link three -->
-               <li><a href="">services <span><i class="fa-solid fa-caret-down"></i></span></a>
-                  <ul class=dropdown>
+               <li class="menu-item"><a href="">services <span><i class="fa-solid fa-caret-down"></i></span></a>
+                  <ul class="dropdown-menu">
                       <li><a href="">iBuy</a></li>
                      <li><a href="">iSell</a></li>
                      <li><a href="">iSwap</a></li>
-                  </ul>
+                  </ul>               
                </li>
 
             <!-- menu link four -->
-            <li><a href="">faqs</a></li>
+            <li class="menu-item"><a href="">faqs</a></li>
 
             <!-- menu link five- -->
-            <li><a href="">contact</a></li>
+            <li class="menu-item"><a href="">contact</a></li>
             </ul>
          </div>
 
          <!-- menu btns -->
-      <div class="menu-btns">
+      <!-- <div class="menu-btns">
           <button class="menu-btn menu-btn-one">Log in</button>
           <button class="menu-btn menu-btn-two">Register</button>
-      </div>
+      </div> -->
 
       <!-- menu socials -->
       <div class="menu-socials">
@@ -206,7 +213,7 @@
 
               <div class="form-xtra">
                    <input type="checkbox" name="checkbox" id="checkbox">
-              <p>i agree to the terms & conditions</p>
+              <p>I agree to the terms & conditions</p>
               </div>
            
             <div class="form-submit-btn">
@@ -293,16 +300,41 @@
           </div>
     </section>
 
+    <section class="social-handles">
+        <div class="social-wrapper">
+          <a href="">
+            <span><i class="fa-brands fa-facebook"></i></span>
+          </a>
+          <a href="">
+            <span><i class="fa-brands fa-twitter"></i></span>
+          </a>
+          <a href="">
+            <span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+        </div>
+    </section>
+
   <main>
     <section class="products">
         <div class="products-wrapper">
+
           <!-- product buttons -->
-          <div class="products-btns">
-            <button class="product-btn product-btn-one product-active">All</button>
-            <button class="product-btn product-btn-two">Laptops</button>
-            <button class="product-btn product-btn-three">Phones</button>
-            <button class="product-btn product-btn-four">Others</button>
+          <div class="products-btn-container">
+            <!-- scroll products left -->
+             <button class="scroll-btn left"> &#10094;</button> 
+
+          <!-- products buttons -->
+          <div class="products-btns">           
+            <div class="product-btn product-btn-one product-active">All</div>
+            <div class="product-btn product-btn-two">Laptops</div>
+            <div class="product-btn product-btn-three">Phones</div>
+            <div class="product-btn product-btn-four">Others</div>
           </div>
+
+          <!-- scroll product right -->
+           <button class="scroll-btn right">        &#10095;
+          </button> 
+                    </div>
 
           <!---- products container ----->
           <div class="products-container">
@@ -321,6 +353,7 @@
                   <input type="number" name="number" min="1" step="1" value="0" id="product-input" class="product-input">
                   <button class="decrement">+</button>
                   </div>
+                  
                   <div class="product-btns">
                   <button class="product-button product-cart">Add to cart</button>
                   <button class="product-button product-buy">Buy now</button>
@@ -556,6 +589,7 @@
         </div>
     </section>
   </main>
+
 
  <script src="./app.js"></script>
 </body>
